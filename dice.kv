@@ -1,0 +1,24 @@
+<DiceLayout>:
+    orientation: 'vertical'
+    spacing: 20
+    padding: 50
+    canvas.before:
+        Color:
+            rgb: 1, 1, 1  # white background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Image:
+        id: dice_image
+        source: root.dice_source
+        size_hint: (1, 0.8)
+        allow_stretch: True
+        keep_ratio: True
+
+    Button:
+        text: "Roll Dice 🎲"
+        size_hint: (1, 0.2)
+        font_size: 24
+        background_color: (0.2, 0.6, 0.2, 1)
+        on_press: root.roll_dice()
